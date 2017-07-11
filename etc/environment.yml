@@ -10,8 +10,8 @@
 # Webserver
 
 # General
-WEB_DOCUMENT_ROOT=/app/
-WEB_DOCUMENT_INDEX=index.php
+WEB_DOCUMENT_ROOT=/app/web/
+WEB_DOCUMENT_INDEX=app_dev.php
 CLI_SCRIPT=php /app/index.php
 
 #######################################
@@ -20,12 +20,12 @@ CLI_SCRIPT=php /app/index.php
 
 # PHP.ini
 
-# php.memory_limit=2G
-# php.date.timezone=UTC
-# php.display_errors=1
-# php.max_execution_time=600
-# php.post_max_size=50M
-# php.upload_max_filesize=50M
+ php.memory_limit=2G
+# php.date.timezone=UTC-3
+ php.display_errors=1
+ php.max_execution_time=600
+ php.post_max_size=50M
+ php.upload_max_filesize=50M
 
 # FPM global (master)
 
@@ -69,6 +69,11 @@ MYSQL_DATABASE=database
 POSTGRES_USER=dev
 POSTGRES_PASSWORD=dev
 POSTGRES_DATABASE=dev
+
+#######################################
+# MSSQL settings
+ACCEPT_EULA=Y
+SA_PASSWORD=dev
 
 #######################################
 # FTP settings
